@@ -50,9 +50,11 @@ namespace Sapiscow.Module.Audios
         public void PlayBgm(string bgmName, bool stopOthers = true, bool forceRestart = false)
             => _player.PlayBgm(_bgmPrefix + bgmName.ToLower(), stopOthers, forceRestart);
 
-        public void StopBgm(string bgmName) => _player.StopBgm(_bgmPrefix + bgmName.ToLower());
+        public void StopBgm(string bgmName)
+            => _player.StopBgm(_bgmPrefix + bgmName.ToLower());
 
-        public void StopAllBgm() => _player.StopAllBgm();
+        public void StopAllBgm()
+            => _player.StopAllBgm();
         #endregion
 
         #region Sfx
@@ -83,11 +85,14 @@ namespace Sapiscow.Module.Audios
         public int PlaySfx(string sfxName, bool isLooping = false)
             => _player.PlaySfx(_sfxPrefix + sfxName.ToLower(), isLooping);
 
-        public void StopSfx(string sfxName) => _player.StopSfx(_sfxPrefix + sfxName.ToLower());
+        public void StopSfx(string sfxName)
+            => _player.StopSfx(_sfxPrefix + sfxName.ToLower());
 
-        public void StopSfx(int sfxId) => _player.StopSfx(sfxId);
+        public void StopSfx(int sfxId)
+            => _player.StopSfx(sfxId);
 
-        public void StopAllSfx() => _player.StopAllSfx();
+        public void StopAllSfx()
+            => _player.StopAllSfx();
         #endregion
 
         public void SetVolume(AudioType audioType, float volume)

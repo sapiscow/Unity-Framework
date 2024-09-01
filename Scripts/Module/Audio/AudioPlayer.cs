@@ -57,9 +57,11 @@ namespace Sapiscow.Module.Audios
                 source.Stop();
         }
 
-        public bool IsBgmPrepared(string bgmName) => _bgmPool.ContainsKey(bgmName);
+        public bool IsBgmPrepared(string bgmName)
+            => _bgmPool.ContainsKey(bgmName);
 
-        public bool IsPlayingBgm(string bgmName) => _bgmPool[bgmName].isPlaying;
+        public bool IsPlayingBgm(string bgmName)
+            => _bgmPool[bgmName].isPlaying;
         #endregion
 
         #region Sfx
@@ -121,7 +123,8 @@ namespace Sapiscow.Module.Audios
                 _sfxPool[sfxId].volume = volume;
         }
 
-        public bool IsSfxPrepared(string sfxName) => _sfxCaches.ContainsKey(sfxName);
+        public bool IsSfxPrepared(string sfxName)
+            => _sfxCaches.ContainsKey(sfxName);
         #endregion
 
         public void SetVolume(AudioType audioType, float volume)
