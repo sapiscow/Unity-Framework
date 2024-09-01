@@ -101,7 +101,7 @@ namespace Sapiscow.Framework.Injection
                 if (!IsSystemInterface(interfaceType) || _dependencies.ContainsKey(interfaceType))
                     return;
 
-                System.Type classType = ReflectionUtils.GetImplementedClassType(interfaceType);
+                System.Type classType = ReflectionHelper.GetImplementedClassType(interfaceType);
                 object instance = null;
 
                 if (classType.IsSubclassOf(typeof(BaseSystemNative)))

@@ -11,7 +11,7 @@ namespace Sapiscow.Framework.Boot
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void Main()
         {
-            System.Type classType = ReflectionUtils.GetImplementedClassType(typeof(IGameMain));
+            System.Type classType = ReflectionHelper.GetImplementedClassType(typeof(IGameMain));
             if (classType == null)
             {
                 Debug.LogError("There is no class that implemented IGameMain, game couldn't be started!");
